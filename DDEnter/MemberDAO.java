@@ -28,8 +28,8 @@ public class MemberDAO {
 			
 			int result = pstmt.executeUpdate();
 			if(result > 0) {
-			   System.out.println("▒▒ " + mDto.getAname()+ " 를 등록하였습니다.");
-			 } else {
+				
+			}else {
 			  System.out.println("▒▒ 등록에 실패하였습니다. 관리자에게 문의해주세요.");
 			 }
 		} catch (Exception e) {
