@@ -71,6 +71,7 @@ public class DDBoradMain {
 				System.out.print("▩▩▩▩▩▩ 번호를 입력하세요 >>");
 				int bno = sc.nextInt();
 				
+				bDao.BoardDelete(bno);
 				
 			} else if(code == 4) { // 게시글 조회
 				System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
@@ -78,11 +79,26 @@ public class DDBoradMain {
 				
 				
 			} else if(code == 5) {
-				
-			} else if(code == 6) {
+				System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
+				System.out.println("▩▩▩▩▩▩ 검색할 키워드를 입력하세요.");
+				System.out.print("▩▩▩▩▩▩ 검색 >>");
+				sc.nextLine();
+				String keyword = sc.nextLine();
+
+				bDao.BoardSearch(keyword);
+			} else if(code == 6) { //게시글 정렬
+				System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
+				System.out.println("▩▩▩▩▩▩ 게시글 조회수 정렬입니다.");
+				bDao.BoardSort();
+
 				
 			} else if(code == 7) {
+				System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
+				System.out.println("▩▩▩▩ 보고싶은 게시글번호를 입력하세요. ");
+				System.out.print("▩▩▩▩ 게시글번호 >>");
+				int bno = sc.nextInt();
 				
+				bDao.BoardView(bno);
 			} else if(code == 8) { // 만든이
 				System.out.println("▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩▩");
 				System.out.println("▩▩▩▩ Name : DD Boaed Program ");
